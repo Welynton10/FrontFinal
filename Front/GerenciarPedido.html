@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Pedidos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Home.html">Início</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="GerenciarCliente.html">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="GerenciarPedido.html">Pedidos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <h1 class="text-center">Gerenciar Pedidos</h1>
+
+        <!-- Formulário de Busca e Botão de Novo Pedido -->
+        <div class="d-flex justify-content-between align-items-center mt-4 mb-3">
+            <div class="input-group w-50">
+                <input type="text" class="form-control" placeholder="Buscar pedido por ID" id="searchOrderId">
+                <button class="btn btn-primary" id="searchButton">Buscar</button>
+            </div>
+            <a href="NovoPedido.html" class="btn btn-success">Novo Pedido</a>
+        </div>
+
+        <!-- Tabela de Pedidos -->
+        <table class="table table-striped">
+            <thead class="table-primary">
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="orderList">
+                <!-- Dados de exemplo (remover ao integrar com API) -->
+                
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
